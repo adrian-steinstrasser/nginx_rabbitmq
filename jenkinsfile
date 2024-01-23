@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Inicial') {
+            steps {
+                echo 'Iniciando a pipeline'
+            }
+        }
+        
+    post {
+        success {
+            // Ações a serem realizadas se a pipeline for bem-sucedida
+            echo 'A pipeline foi executada com sucesso!'
+        }
+        
+        failure {
+            // Ações a serem realizadas se a pipeline falhar
+            echo 'A pipeline falhou. Verifique os logs para obter mais detalhes.'
+        }
+    }
+}
