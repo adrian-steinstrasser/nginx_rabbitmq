@@ -9,7 +9,7 @@ pipeline {
             }
         }
         stage('Criando ambiente AWS Nginx + RabbitMQ') {
-            script{
+            steps {
                 sh 'sudo terraform init'
                 sh 'sudo terraform apply'
             }
