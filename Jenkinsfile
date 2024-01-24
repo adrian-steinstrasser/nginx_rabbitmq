@@ -11,7 +11,7 @@ pipeline {
         stage('Criando ambiente AWS Nginx + RabbitMQ') {
             steps {
                 script{
-                    sh 'terraform init  -auto-approve'
+                    sh 'terraform init'
                     sh 'terraform apply -auto-approve'
                 }
             }
