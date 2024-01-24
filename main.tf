@@ -6,12 +6,6 @@ terraform {
     }
   }
   required_version = ">= 1.2.0"
-
-  backend "s3" {
-    bucket         = "terraform-remote-state-bucket-nginx-rabbitmq"  # Nome do seu bucket
-    key            = "terraform.tfstate"              # Nome do arquivo de estado no bucket
-    region         = "us-east-1"
-    }
 }
 provider "aws" {
   profile = "default"
